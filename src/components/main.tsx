@@ -1,6 +1,4 @@
-// src/components/Main.tsx
 import React from 'react';
-
 
 const Main = () => {
   return (
