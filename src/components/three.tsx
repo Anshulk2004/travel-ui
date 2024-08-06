@@ -4,8 +4,9 @@ import React,{useRef,useState} from 'react';
 import { Canvas,useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import '../app/globals.css'
+import { Sphere } from '@react-three/drei';
 
-function Box({speed = 0.01}) {
+function Box({speed = 0.10}) {
   const meshRef = useRef<THREE.Mesh>(null);
   const sphereRef = useRef<THREE.Mesh>(null);
   const coneRef = useRef<THREE.Mesh>(null);
@@ -26,7 +27,7 @@ function Box({speed = 0.01}) {
     }
 
     if (coneRef.current) {
-      coneRef.current.rotation.y += 0.02; 
+      coneRef.current.rotation.y += 0.10; 
       coneRef.current.position.x = Math.sin(Date.now() * 0.001) * 2;
       coneRef.current.position.z = Math.cos(Date.now() * 0.001) * 2;
     }
@@ -56,7 +57,7 @@ function  Three() {
       <Canvas style={{ background: 'black' }} camera={{ position: [2, 2, 5] }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <Box speed={0.02}/>
+        <Box speed={0.05}/>        
       </Canvas>
     </div>
   );
