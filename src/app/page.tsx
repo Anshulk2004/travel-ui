@@ -3,6 +3,8 @@ import AnimatedText from '@/components/AnimatedText';
 import { Button } from "@/components/ui/button";
 import './globals.css';
 
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#020817] via-[#1a1b2e] to-[#2d1b47]">
